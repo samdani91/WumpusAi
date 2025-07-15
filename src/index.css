@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+@keyframes bounce-wumpus {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes pulse-gold {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes bounce-strong {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-8px); }
+  75% { transform: translateY(-4px); }
+}
+@keyframes ping-fast {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2.5s infinite ease-in-out;
+}
+.animate-bounce-wumpus {
+  animation: bounce-wumpus 1.5s infinite ease-in-out;
+}
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite ease-in-out;
+}
+.animate-spin-slow {
+    animation: spin-slow 4s linear infinite;
+}
+.animate-bounce-strong {
+    animation: bounce-strong 1s infinite ease-in-out;
+}
+.animate-ping-fast {
+    animation: ping-fast 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
